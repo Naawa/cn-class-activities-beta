@@ -1,0 +1,124 @@
+@font-face {
+    font-family: 'Azo Sans';
+    src: url('/fonts/AzoSans-Regular.otf');
+}
+
+@font-face {
+    font-family: 'Azo Sans Bold';
+    src: url('/fonts/AzoSans-Bold.otf');
+}
+
+@font-face {
+    font-family: 'Azo Sans Black';
+    src: url('/fonts/AzoSans-Black.otf');
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-rendering: optimizeLegibility;
+    font-family: 'Azo Sans';
+    outline: none;
+    line-height: 1.8;
+    transition: all 0.2s;
+}
+
+a {
+    font-family: 'Azo Sans Bold';
+}
+
+button,
+label,
+b,
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Azo Sans Black';
+}
+
+html,
+body,
+input,
+button {
+    font-size: clamp(6px, 1.6vmax, 1.8svh);
+}
+
+@media (width < 600px) {
+
+    html,
+    body,
+    input,
+    button {
+        font-size: 1vh;
+    }
+}
+
+/* 16px */
+
+html,
+body {
+    background: #1376bd;
+    background: linear-gradient(-90deg, #1376bd 30%, #a839b9 80%);
+    background-repeat: no-repeat;
+    background-size: 150% 150%;
+    min-height: fit-content;
+}
+
+
+h1 {
+    font-size: 1.990rem;
+    /* 31.84px */
+}
+
+h2 {
+    font-size: 1.658rem;
+    /* 26.56px */
+}
+
+h3 {
+    font-size: 1.382rem;
+    /* 22.08px */
+}
+
+h4 {
+    font-size: 1.152rem;
+    /* 18.4px */
+}
+
+h5 {
+    font-size: 0.960rem;
+    /* 15.36px */
+}
+
+small {
+    font-size: 0.667rem;
+    /* 10.72px */
+}
+
+p {
+    text-wrap: pretty;
+    width: clamp(none, 100%, 16em);
+}
+
+::grammarly-desktop-integration {
+    display: none;
+}
+
+::placeholder {
+    color: hsla(271, 36%, 79%, 0.421);
+}
+
+::selection {
+    background-color: #281534af;
+    color: hsl(0, 0%, 100%);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
