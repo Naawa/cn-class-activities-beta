@@ -1,6 +1,7 @@
 interface Activity {
     name: string,
     image: string,
+    duration?: number,
 }
 
 export function getTimeBlocks(weekday: boolean, hour: number) {
@@ -18,10 +19,13 @@ export function getTimeBlocks(weekday: boolean, hour: number) {
         activityTimeBlock.setHours(hour, minute, 0, 0)
         timeBlocks.push(activityTimeBlock)
         if (i == 1 || i == 2) {
-            minute += 20
+            minute += 15
+        }
+        else if (i == 0) {
+            minute += 10
         }
         else {
-            minute += 10
+            minute += 20
         }
     }
     return timeBlocks
@@ -42,10 +46,13 @@ export function getSeniorTimeBlocks(weekday: boolean, hour: number, numberOfActi
         activityTimeBlock.setHours(hour, minute, 0, 0)
         timeBlocks.push(activityTimeBlock)
         if (i == numberOfActivities - 2) {
-            minute += 40
+            minute += 30
+        }
+        else if (i == 0) {
+            minute += 10
         }
         else {
-            minute += 10
+            minute += 20
         }
     }
     return timeBlocks
@@ -77,11 +84,11 @@ export let seniorActivities: Activity[] = [
         image: "keyboard.svg"
     },
     {
-        name: "Impact",
+        name: "Coding",
         image: "code.svg"
     },
     {
-        name: "Exploration",
+        name: "Ninja Trials",
         image: "free-time.svg"
     },
 ]
