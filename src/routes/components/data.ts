@@ -73,7 +73,7 @@ export let activities: Activity[] = [
         image: "code-spark.svg"
     },
     {
-        name: "Free Time",
+        name: "Ninja Trials",
         image: "free-time.svg"
     },
 ]
